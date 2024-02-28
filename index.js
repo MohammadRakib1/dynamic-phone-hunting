@@ -67,6 +67,12 @@ const showPhoneDetails = (phone) => {
     const phoneName = document.getElementById('show-details-phone-name');
     phoneName.innerText = phone.name;
 
+    const showDetailContainer = document.getElementById('show-detail-container');
+    showDetailContainer.innerHTML = `
+        <img src='${phone.image}' alt='' /> 
+        <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p>    
+        <p><span>GPS:</span>${phone?.others?.GPS}</p>    
+        `
 
     show_details_modal.showModal();
 }
