@@ -63,7 +63,7 @@ const handleShowDetails = async (id) => {
 }
 
 const showPhoneDetails = (phone) => {
-    console.log(phone);
+    // console.log(phone);
     const phoneName = document.getElementById('show-details-phone-name');
     phoneName.innerText = phone.name;
 
@@ -71,7 +71,7 @@ const showPhoneDetails = (phone) => {
     showDetailContainer.innerHTML = `
         <img src='${phone.image}' alt='' /> 
         <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p>    
-        <p><span>GPS:</span>${phone?.others?.GPS}</p>    
+        <p><span>GPS:</span>${phone?.others?.GPS || 'NO GPS'}</p>    
         `
 
     show_details_modal.showModal();
